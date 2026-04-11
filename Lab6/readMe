@@ -1,1 +1,4 @@
-
+roject Overview
+This project implements a Linear Regression model to analyze customer behavior for an Ecommerce platform and predict Yearly Amount Spent.
+By exploring features such as session length, time spent on the app versus the website, and length of membership, the analysis identifies which factors most significantly drive revenue. 
+The model was built using scikit-learn, achieving high predictive accuracy. Key insights reveal that Length of Membership and Time on App are the primary drivers of customer spending, providing actionable data to help the company decide where to focus their development efforts.
