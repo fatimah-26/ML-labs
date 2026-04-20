@@ -1,1 +1,16 @@
 
+
+ Poject Overview
+In this project, I used the **K-Nearest Neighbors** algorithm to classify a hidden dataset. 
+The goal was to optimize the model by finding the best 'K' value using the **Elbow Method**.
+
+1. **Data Scaling:** Standardized the features since KNN relies on distance.
+2. **Initial Model:** Started with $K=1$ (Accuracy: ~72%).
+3. **Elbow Method:** Ran a loop for $K=1$ to $K=40$ to find the lowest error rate.
+4. **Final Model:** Retrained with $K=30$, improving accuracy to **84%**.
+
+Technologies Used
+* Python
+* Pandas / NumPy
+* Scikit-Learn
+* Matplotlib / Seaborn
