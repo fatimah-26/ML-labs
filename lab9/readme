@@ -1,1 +1,10 @@
+Project Overview
+Lending Club connects people who need money (borrowers) with people who have money (investors). As an investor, you want to identify borrowers who have a high probability of paying you back.
 
+This project involves:
+
+Exploratory Data Analysis (EDA): Visualizing FICO scores, interest rates, and loan purposes using Seaborn and Matplotlib.
+
+Data Preprocessing: Handling categorical features using dummy variables (pd.get_dummies).
+
+Machine Learning: Comparing a single Decision Tree Classifier against a Random Forest Classifier.
