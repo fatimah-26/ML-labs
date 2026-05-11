@@ -1,1 +1,11 @@
+Project Overview
+The goal of this project is to explore the Iris dataset, visualize the relationships between features, and build a robust machine learning model for classification.
 
+Technologies Used
+Python
+Pandas & NumPy
+Scikit-Learn
+Seaborn & Matplotlib
+
+ Results:-
+The final model achieved an impressive accuracy of 98%, correctly classifying almost all flowers in the test set.
