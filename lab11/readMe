@@ -1,0 +1,21 @@
+## Final Questions
+1. Why is this an unsupervised learning problem?Because the dataset does not contain any pre-defined target labels or historical groupings for the customers. The algorithm must find hidden patterns and group the data autonomously based purely on feature similarities
+
+2. Why did we remove the CUST_ID column?Because CUST_ID is a unique identifier (a string/sequence key) that does not represent any actual financial or spending behavior. Leaving it in would disrupt distance calculations and lower the quality of clustering.
+
+
+3. Which columns had missing values?The MINIMUM_PAYMENTS column had a significant amount of missing values, and the CREDIT_LIMIT column had a few missing values
+
+4. How did you handle the missing values?They were handled using mean imputation, where all missing values in a column were replaced with the calculated mathematical average (mean) of that specific column.
+
+5. Why is scaling important before applying K-Means?K-Means relies heavily on calculating Euclidean distance between points. Since features like BALANCE have massive numerical scales (thousands of dollars) compared to features like PURCHASES_FREQUENCY (ranging between 0 and 1), unscaled data would cause large-magnitude features to dominate the model entirely.
+
+6. Which K value did you choose? Explain your answer using the elbow method and silhouette score.I chose $K = 4$. The Elbow Curve showed that the drop in inertia begins to flatten out significantly around 3 or 4 clusters. Looking at the Silhouette Score, $K=4$ provides a solid, balanced score while resulting in distinct, business-actionable customer profiles.
+
+7. Based on the cluster summary table, describe each customer segment in your own words. (Note: Profiles may slightly shift depending on exact runs, but typically look like this for $K=4$):Cluster 0 (Standard/Careful Users): Low to moderate spending, maintain low balances, and rarely take cash advances. They use their cards conservatively.Cluster 1 (Cash Advance Reliant Users): Customers who rarely use their cards to buy items directly, but frequently use them to withdraw cash advances. They tend to have higher balances.Cluster 2 (High-Spending VIPs): Customers with exceptionally high purchase volumes, high credit limits, and highly frequent transactions. They use credit cards as a main payment method.Cluster 3 (One-Off/Installment Buyers): Moderate spenders who prefer structured payments (either installment or big one-off purchases) with good repayment behavior.
+
+8. Which cluster may represent high-value customers?Cluster 2, because they show the highest average PURCHASES amount, frequent transactions, and hold higher credit limits.
+
+9. Which cluster may represent customers who rely more on cash advance?Cluster 1, as it shows the highest average value in the CASH_ADVANCE and CASH_ADVANCE_TRX features.
+
+10. How can a company use these clusters for marketing strategy?For High-Spenders (Cluster 2): Enroll them in premium rewards programs, cashback offers, and luxury partner tie-ins to ensure customer loyalty.For Cash-Advance Users (Cluster 1): Market short-term loan options or offer lower transactional interest rates on ATM cash withdrawals to capitalize on their behavior safely.For Low/Careful Spenders (Cluster 0): Send promotional activation emails with discounts or low-APR periods to incentivize them to swipe their cards more frequently.
